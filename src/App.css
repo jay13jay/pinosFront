@@ -1,8 +1,36 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1920px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(113, 113, 113);
 }
+
+:root {
+  --primary-color: #ff0000;
+  --primary-color-light: #ff200c;
+  --primary-color-dark: rgb(77, 7, 7);
+  --primary-color-contrast: #fff;
+
+  --secondary-color: #ffff00;
+  --secondary-color-light: #f5f662;
+  --secondary-color-dark: #ffd100;
+  --secondary-color-contrast: #000;
+
+  --accent-color: #00ff00;
+  --accent-color-light: #a3ff90;
+  --accent-color-dark: #00ea00;
+  --accent-color-contrast: #ff00ff;
+
+  --comp-color: #00ffff;
+  --comp-color-light: #5dffff;
+  --comp-color-dark: #00a4a9;
+  --comp-color-contrast: #ff0000;
+
+  --analog-color-main: #ff0080;
+  --analog-color-alt: #ff8000;
+  --analog-color-alt-light: #ffc31d;
+  --analog-color-alt-dark: #5f2f00;
+}
+

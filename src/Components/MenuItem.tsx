@@ -1,13 +1,18 @@
 import React from 'react';
 import { Card, CardContent, Typography, List, ListItem } from '@mui/material';
 
-const MenuItem = ({ title, description, ingredients, price }) => {
+interface MenuItemProps {
+  title: string;
+  description: string;
+  ingredients: string[];
+  price: string;
+}
+
+const MenuItem: React.FC<MenuItemProps> = ({ title, description, ingredients, price }) => {
   return (
     <Card sx={{ 
       m: 1,
-      width: '100%',
-      backgroundColor: 'rgba(255, 0, 0, 0.58)',
-      border: '7px solid black',
+      backgroundColor: 'rgba(205, 33, 42, 1)',
     }}>
       <CardContent>
         <Typography variant="h5" component="h2">

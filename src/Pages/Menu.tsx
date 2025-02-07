@@ -6,7 +6,9 @@ import MenuItem from '../Components/MenuItem';
 import MainContent from '../Components/MainContent';
 import MenuContainer from '../Components/MenuContainer';
 
-const Menu = () => {
+declare module '../Components/MenuItem';
+
+const Menu: React.FC = () => {
   return (
     <>
       <Header title="Menu" />
