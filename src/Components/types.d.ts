@@ -14,3 +14,12 @@ export interface HeaderProps {
 }
 declare const Header: React.FC<HeaderProps>;
 export default Header;
+// NavButton
+export interface NavButtonProps {
+  label: string;
+  icon: React.ReactNode;
+  to: string;
+  onClick: () => void;
+}
+declare const NavButton: React.FC<NavButtonProps>;
+export default NavButton;

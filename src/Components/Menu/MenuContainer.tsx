@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid2';
-import MenuContainerProps from './types';
+import type { MenuContainerProps } from './types';
 
 const Item = styled(Paper)(() => ({
     border: '5px solid #000',

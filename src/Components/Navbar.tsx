@@ -3,8 +3,9 @@ import { Button, useTheme } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { NavLink } from 'react-router-dom';
+import { NavButtonProps } from './types';
 
-const NavButton: React.FC<{ to: string, label: string, icon: React.ReactNode }> = ({ to, label, icon }) => {
+const NavButton: React.FC<NavButtonProps> = ({ to, label, icon }) => {
   const theme = useTheme();
   const buttonStyles = {
     color: theme.palette.secondary.dark,
@@ -27,9 +28,9 @@ const Navbar: React.FC = () => {
   return (
     <nav>
       <div>
-        <NavButton to="/" label="Home" icon={<HomeIcon />} />
-        <NavButton to="/menu" label="Menu" icon={<MenuBookIcon />} />
-        <NavButton to="/location-and-hours" label="Location & Hours" icon={null} />
+        <NavButton to="/" label="Home" icon={<HomeIcon />} onClick={() => {}} />
+        <NavButton to="/menu" label="Menu" icon={<MenuBookIcon />} onClick={() => {}} />
+        <NavButton to="/location-and-hours" label="Location & Hours" icon={null} onClick={() => {}} />
       </div>
     </nav>
   );
