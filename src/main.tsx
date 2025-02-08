@@ -12,6 +12,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+const base = import.meta.env.BASE_URL; // this will be "/pinosFront/"
 
 const getComputedStyleValue = (variable: string) => getComputedStyle(document.documentElement).getPropertyValue(variable);
 

@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jay13jay.github.io/pinosFront",
+  "homepage": "https://jay13jay.github.io/pinosFront/",
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 8080",
     "build": "tsc -b && vite build",
