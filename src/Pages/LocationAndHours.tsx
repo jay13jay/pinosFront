@@ -7,7 +7,7 @@ import MainContent from '../Components/MainContent';
 const LocationAndHours: React.FC = () => {
   return (
     <>
-      <Header title="Location and Hours" />
+      <Header title="Location" />
       <MainContent>
         <Typography variant="h2">Our Location and Hours</Typography>
       </MainContent>
