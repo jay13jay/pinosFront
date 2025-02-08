@@ -6,13 +6,13 @@ import MainContent from '../Components/MainContent';
 
 const LocationAndHours: React.FC = () => {
   return (
-    <Container>
+    <>
       <Header title="Location and Hours" />
       <MainContent>
         <Typography variant="h2">Our Location and Hours</Typography>
       </MainContent>
       <Footer />
-    </Container>
+      </>
   );
 };
 

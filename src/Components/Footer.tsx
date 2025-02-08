@@ -1,16 +1,17 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 const Footer: React.FC = () => {
   return (
-    <Box component="footer" sx={{
-      py: 3,
-      px: 2, 
-      mt: 'auto', 
-      backgroundColor: 'primary.main' 
-    }}>
-      <Typography variant="body1">Site by: Sentient™ 2025</Typography>
-    </Box>
+    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+        <Toolbar>
+            <Typography variant="body1"
+            sx={{ textAlign: 'center', flexGrow: 1 }}>
+            Site by: Sentient™ 2025 &copy;
+            </Typography>
+          {/* <Button color="inherit">Login</Button> */}
+        </Toolbar>
+      </AppBar>
   );
 };
 

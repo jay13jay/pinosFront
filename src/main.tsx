@@ -7,10 +7,15 @@ import Menu from './Pages/Menu';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import './App.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 const getComputedStyleValue = (variable: string) => getComputedStyle(document.documentElement).getPropertyValue(variable);
 
-const theme = createTheme({
+const customTheme = {
   palette: {
     primary: {
       main: getComputedStyleValue('--primary-color').trim(), // red
@@ -20,12 +25,16 @@ const theme = createTheme({
     },
     secondary: {
       main: getComputedStyleValue('--secondary-color').trim(), // yellow
-      light: getComputedStyleValue('--secondary-color-light').trim(), // light yellow
+      light: getComputedStyleValue('--accent-color').trim(), // Italian flag green
       dark: getComputedStyleValue('--secondary-color-dark').trim(), // orange
       contrastText: getComputedStyleValue('--secondary-color-contrast').trim(), // black
     },
   },
-});
+};
+
+const theme = createTheme();
+
+
 
 const container = document.getElementById('root');
 if (container) {
