@@ -18,7 +18,7 @@
     "declarationMap": true,
     // "emitDeclarationOnly": true,
     "outDir": "./dist",
-    "types": ["node", "react-dom", "react-router-dom"]
+    "types": ["node", "react-dom", "react-router-dom", "vite/client"]
   },
   "include": [
     "src/**/*.ts",

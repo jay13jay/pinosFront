@@ -12,7 +12,13 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-const base = import.meta.env.BASE_URL; // this will be "/pinosFront/"
+interface ImportMetaEnv {
+  readonly BASE_URL: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
 
 const getComputedStyleValue = (variable: string) => getComputedStyle(document.documentElement).getPropertyValue(variable);
 
@@ -35,7 +41,7 @@ const customTheme = {
 
 const theme = createTheme();
 
-
+const base = import.meta.env.BASE_URL; // should be "/pinosFront/"
 
 const container = document.getElementById('root');
 if (container) {
@@ -43,7 +49,7 @@ if (container) {
   root.render(
     <React.StrictMode>
       <ThemeProvider theme={theme}>
-        <Router>
+        <Router basename={base}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/location-and-hours" element={<LocationAndHours />} />
