@@ -19,7 +19,7 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
-
+const base = import.meta.env.BASE_URL; // should be "/pinosFront/"
 const getComputedStyleValue = (variable: string) => getComputedStyle(document.documentElement).getPropertyValue(variable);
 
 const customTheme = {
@@ -39,9 +39,8 @@ const customTheme = {
   },
 };
 
-const theme = createTheme();
+const theme = createTheme(customTheme);
 
-const base = import.meta.env.BASE_URL; // should be "/pinosFront/"
 
 const container = document.getElementById('root');
 if (container) {
@@ -54,8 +53,6 @@ if (container) {
             <Route path="/" element={<Home />} />
             <Route path="/location-and-hours" element={<LocationAndHours />} />
             <Route path="/menu" element={<Menu />} />
-            <Route path="/about" element={<Home />} />
-            <Route path="/contact" element={<Home />} />
           </Routes>
         </Router>
       </ThemeProvider>

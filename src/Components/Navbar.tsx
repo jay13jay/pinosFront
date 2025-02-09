@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
       <div>
         <NavButton to="/" label="Home" icon={<HomeIcon />} onClick={() => {}} />
         <NavButton to="/menu" label="Menu" icon={<MenuBookIcon />} onClick={() => {}} />
-        <NavButton to="/location" label="Location & Hours" icon={null} onClick={() => {}} />
+        <NavButton to="/location-and-hours" label="Location" icon={null} onClick={() => {}} />
       </div>
     </nav>
   );
