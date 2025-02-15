@@ -2,11 +2,12 @@ import React from 'react';
 
 // MenuItem
 export interface MenuItemProps {
+    id: number;
     title: string;
     image: string;
     description: string;
     ingredients: string[];
-    price: string;
+    price: number;
   }
   
   // MenuContainer
