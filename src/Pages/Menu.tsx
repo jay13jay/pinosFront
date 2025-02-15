@@ -47,7 +47,7 @@ const Menu: React.FC = () => {
                 title={item.title}
                 description={item.description}
                 ingredients={item.ingredients}
-                price={item.price}
+                price={Number(item.price)}
                 image={item.image} id={0}              />
             ))}
             {menuItems.map((item, index) => (
@@ -56,7 +56,7 @@ const Menu: React.FC = () => {
                 title={item.title}
                 description={item.description}
                 ingredients={item.ingredients}
-                price={item.price}
+                price={Number(item.price)}
                 image={item.image} id={0}              />
             ))}
             {menuItems.map((item, index) => (
@@ -65,7 +65,7 @@ const Menu: React.FC = () => {
                 title={item.title}
                 description={item.description}
                 ingredients={item.ingredients}
-                price={item.price}
+                price={Number(item.price)}
                 image={item.image} id={0}              />
             ))}
           </MenuContainer>

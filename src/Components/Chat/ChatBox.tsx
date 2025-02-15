@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import { Box, Paper, IconButton, TextField, Button, List, ListItem } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import CloseIcon from '@mui/icons-material/Close';
+
+const Item = styled(Paper)(({ theme }) => ({
+	backgroundColor: '#grey',
+	...theme.typography.body2,
+	padding: theme.spacing(1),
+	textAlign: 'center',
+	color: theme.palette.text.secondary,
+  }));
 
 const ChatBox: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +60,7 @@ const ChatBox: React.FC = () => {
             ))}
           </List>
           <Grid container alignItems="center" padding={1} spacing={1}>
-            <Grid xs>
+            <Item>
               <TextField
                 fullWidth
                 size="small"
@@ -65,12 +74,12 @@ const ChatBox: React.FC = () => {
                   }
                 }}
               />
-            </Grid>
-            <Grid>
+            </Item>
+            <Item>
               <Button color="success" variant="contained" onClick={handleSend}>
                 Send
               </Button>
-            </Grid>
+            </Item>
           </Grid>
         </Paper>
       ) : (
