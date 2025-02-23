@@ -1,45 +1,22 @@
+@import "tailwindcss";
+/* @import "tailwindcss/utilities"; */
+
 #root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 1280px;
-  min-width: 300;
-  height: 100vh;
-  font-family: 'Georgia', sans-serif;
-  background: rgb(156, 156, 156);
-  margin: 0;
-  padding: 0;
+  /* background: rgb(0, 0, 0); */
+}
+
+#html {
+  /* background: rgb(0, 0, 0); */
 }
 
 body {
   /* background: rgb(107, 15, 5); */
-  background: rgb(0, 0, 0);
+  font-family: 'Georgia', sans-serif;
+  /* color: blue; */
 }
 
 :root {
-  --primary-color: #000000;
-  --primary-color-light: #ff200c;
-  --primary-color-dark: rgb(77, 7, 7);
-  --primary-color-contrast: #fff;
-
-  --secondary-color: #ffff00;
-  --secondary-color-light: #f5f662;
-  --secondary-color-dark: #ffd100;
-
-  --accent-color: #00ff00;
-  --accent-color-light: #a3ff90;
-  --accent-color-dark: #00ea00;
-  --accent-color-contrast: #ff00ff;
-
-  --comp-color: #00ffff;
-  --comp-color-light: #5dffff;
-  --comp-color-dark: #00a4a9;
-  --comp-color-contrast: #ff0000;
-
-  --analog-color-main: #ff0080;
-  --analog-color-alt: #ff8000;
-  --analog-color-alt-light: #ffc31d;
-  --analog-color-alt-dark: #5f2f00;
+  /* */
+  font-family: 'Georgia', sans-serif;
 }
 

@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 // Tailwind CSS configuration file
-module.exports = {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   // Specify the files Tailwind should scan for class names
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",      // Include all JS and TS files from app folder
@@ -27,20 +30,20 @@ module.exports = {
     extend: {
       // Extend the default color palette
       colors: {
-        current: "currentColor",   // Use the current text color
-        transparent: "transparent",  // Transparent color
-        white: "#FFFFFF",           // Pure white
-        black: "#121723",           // Custom black shade
-        dark: "#1D2430",            // Dark theme background
-        primary: "#4A6CF7",         // Primary accent color
-        yellow: "#FBB040",          // Yellow accent color
-        "body-color": "#788293",    // Body text color for light theme
-        "body-color-dark": "#959CB1", // Body text color for dark theme
-        "gray-dark": "#1E232E",     // Dark gray for UI contrast
-        "gray-light": "#F0F2F9",     // Light gray for backgrounds
-        stroke: "#E3E8EF",          // Stroke color for borders
-        "stroke-dark": "#353943",   // Stroke color for dark mode
-        "bg-color-dark": "#171C28", // Background color for dark mode layouts
+        // current: "currentColor",   // Use the current text color
+        // transparent: "transparent",  // Transparent color
+        // white: "#FFFFFF",           // Pure white
+        // black: "#121723",           // Custom black shade
+        // dark: "#1D2430",            // Dark theme background
+        // primary: "#4A6CF7",         // Primary accent color
+        // yellow: "#FBB040",          // Yellow accent color
+        // "body-color": "#788293",    // Body text color for light theme
+        // "body-color-dark": "#959CB1", // Body text color for dark theme
+        // "gray-dark": "#1E232E",     // Dark gray for UI contrast
+        // "gray-light": "#F0F2F9",     // Light gray for backgrounds
+        // stroke: "#E3E8EF",          // Stroke color for borders
+        // "stroke-dark": "#353943",   // Stroke color for dark mode
+        // "bg-color-dark": "#171C28", // Background color for dark mode layouts
       },
       // Extend with custom box shadow utilities
       boxShadow: {
@@ -65,4 +68,4 @@ module.exports = {
   },
   // Define plugins (currently no plugins are added)
   plugins: [],
-};
+});

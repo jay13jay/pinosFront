@@ -38,39 +38,37 @@ const menuItems = [
 const Menu: React.FC = () => {
   return (
     <>
-      <Header title="Menu" />
-        <MainContent>
-          <MenuContainer>
-            {menuItems.map((item, index) => (
-              <MenuItem 
-                key={index}
-                title={item.title}
-                description={item.description}
-                ingredients={item.ingredients}
-                price={Number(item.price)}
-                image={item.image} id={0}              />
-            ))}
-            {menuItems.map((item, index) => (
-              <MenuItem 
-                key={index}
-                title={item.title}
-                description={item.description}
-                ingredients={item.ingredients}
-                price={Number(item.price)}
-                image={item.image} id={0}              />
-            ))}
-            {menuItems.map((item, index) => (
-              <MenuItem 
-                key={index}
-                title={item.title}
-                description={item.description}
-                ingredients={item.ingredients}
-                price={Number(item.price)}
-                image={item.image} id={0}              />
-            ))}
-          </MenuContainer>
-        </MainContent>
-      <Footer />
+      <MainContent>
+        <MenuContainer>
+          {menuItems.map((item, index) => (
+            <MenuItem 
+              key={index}
+              title={item.title}
+              description={item.description}
+              ingredients={item.ingredients}
+              price={Number(item.price)}
+              image={item.image} id={0} />
+          ))}
+          {menuItems.map((item, index) => (
+            <MenuItem 
+              key={index}
+              title={item.title}
+              description={item.description}
+              ingredients={item.ingredients}
+              price={Number(item.price)}
+              image={item.image} id={0} />
+          ))}
+          {menuItems.map((item, index) => (
+            <MenuItem 
+              key={index}
+              title={item.title}
+              description={item.description}
+              ingredients={item.ingredients}
+              price={Number(item.price)}
+              image={item.image} id={0} />
+          ))}
+        </MenuContainer>
+      </MainContent>
     </>
   );
 };

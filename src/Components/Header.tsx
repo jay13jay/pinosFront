@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Button, Box, Toolbar, Typography, useTheme } from '@mui/material';
-import Navbar from './Navigation/Navbar';
+import NavbarDefault from './Navigation/Navbar2';
 import { HeaderProps } from './types'; // Adjust the import path as necessary
 import { Height } from '@mui/icons-material';
 
@@ -19,15 +19,16 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   }
 
   return (
-      <AppBar position="fixed">
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {title}
-          </Typography>
-          {/* <Button color="inherit">Login</Button> */}
-          <Navbar />
-        </Toolbar>
-      </AppBar>
+      // <AppBar position="fixed">
+      //   <Toolbar>
+      //     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+      //       {title}
+      //     </Typography>
+      //     {/* <Button color="inherit">Login</Button> */}
+      //     <NavbarDefault />
+      //   </Toolbar>
+      // </AppBar>
+      <NavbarDefault />
   );
 };
 
