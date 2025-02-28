@@ -1,5 +1,4 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
 
 const Footer: React.FC = () => {
   return (
@@ -12,11 +11,9 @@ const Footer: React.FC = () => {
               <p className="text-sm text-gray-500">© Copyright Sentient 2025. All Rights Reserved.</p>
 
               <div className="flex mt-3 -mx-2 sm:mt-0">
-                  <a href="#" className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Teams </a>
+                  <a href="Menu" className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"> Contact Us </a>
 
-                  <a href="#" className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Privacy </a>
-
-                  <a href="#" className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit"> Cookies </a>
+                  <a href="Menu" className="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300"> Menu </a>
               </div>
           </div>
       </div>
