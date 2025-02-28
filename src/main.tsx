@@ -3,20 +3,11 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Layout is the general structure of the pages, includes header, footer, etc
-import Layout from './Components/Layout';
 import Home from './Pages/Home';
 import LocationAndHours from './Pages/LocationAndHours';
 import Menu from './Pages/Menu';
-import { CartProvider } from './Components/Cart/CartContext';
+import { Providers } from './Components/Providers';
 import ChatBox from './Components/Chat/ChatBox';
-
-import './App.css';
-import '@fontsource/cinzel/400.css';
-import '@fontsource/cinzel/500.css';
-import '@fontsource/cinzel/600.css';
-import '@fontsource/cinzel/700.css';
-import '@fontsource/cinzel/800.css';
-import '@fontsource/cinzel/900.css';
 
 import CartPage from './Pages/CartPage';
 
@@ -37,9 +28,7 @@ if (container) {
   const root = createRoot(container);
   root.render(
     <React.StrictMode>
-      <ThemeProvider>
-        <CartProvider>
-          <Layout>
+      <Providers>
             <Router basename={base}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -50,9 +39,7 @@ if (container) {
               </Routes>
               <ChatBox />
             </Router>
-          </Layout>
-        </CartProvider>
-      </ThemeProvider>
+      </Providers>
     </React.StrictMode>
   );
 } else {

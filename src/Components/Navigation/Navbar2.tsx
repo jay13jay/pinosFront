@@ -72,12 +72,13 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
           Location & Hours
         </a>
       </Typography>
+
     </ul>
   );
 
   return (
     <Navbar 
-      className="mx-auto max-w-screen-xl px-4 py-2 lg:px-8 lg:py-4 bg-gray-900 shadow-md"
+      className="w-full px-4 py-2 lg:px-8 lg:py-4 bg-gray-900 shadow-md sticky top-0 z-50"
       placeholder=""
       onPointerEnterCapture={() => {}}
       onPointerLeaveCapture={() => {}}
@@ -96,17 +97,19 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <div className="flex items-center gap-x-1">
-          <Button
-            variant="text"
-            size="sm"
-            className="hidden lg:inline-block text-white hover:text-yellow-500"
-            placeholder=""
-            onPointerEnterCapture={() => {}}
-            onPointerLeaveCapture={() => {}}
-          >
-            <FontAwesomeIcon icon={faShoppingBasket} className="mr-2"/>
+        <Typography
+          as="li"
+          variant="h5"
+          className="flex items-center gap-x-2 p-1 font-medium" 
+          placeholder={undefined} 
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}      
+        >
+          <FontAwesomeIcon icon={faShoppingBasket} />
+          <a href="#" className="flex items-center">
             Order
-          </Button>
+          </a>
+        </Typography>
         </div>
         <IconButton
           variant="text"
