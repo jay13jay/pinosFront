@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from './Header';
+import NavbarDefault from './Navigation/Navbar2';
 import Footer from './Footer';
 import ChatBox from './Chat/ChatBox';
 
@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <>
-      <Header title={pageTitle} />
+      <NavbarDefault title={pageTitle} />
       <main>{children}</main>
       <Footer />
       <ChatBox />

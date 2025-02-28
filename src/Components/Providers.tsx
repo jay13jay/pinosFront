@@ -11,7 +11,6 @@ import '@fontsource/cinzel/600.css';
 import '@fontsource/cinzel/700.css';
 import '@fontsource/cinzel/800.css';
 import '@fontsource/cinzel/900.css';
-import exp from "constants";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (

@@ -6,6 +6,7 @@ export interface MenuItemProps {
     title: string;
     image: string;
     description: string;
+    section: string;
     ingredients: string[];
     price: number;
   }

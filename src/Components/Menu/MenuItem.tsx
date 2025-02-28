@@ -15,7 +15,8 @@ const Item = styled(Paper)(({ theme }) => ({
 	color: theme.palette.text.secondary,
   }));
 
-const MenuItem: React.FC<MenuItemProps> = ({ id, title, image, description, ingredients, price }) => {
+const MenuItem: React.FC<{ menuItem: MenuItemProps }> = ({ menuItem }) => {
+	const { id, title, image, description, ingredients, price, section } = menuItem;
 	const numericId = Number(id);
 	const [showAll, setShowAll] = useState(false);
 	const { addItem } = useContext(CartContext);
@@ -28,16 +29,14 @@ const MenuItem: React.FC<MenuItemProps> = ({ id, title, image, description, ingr
 	));
 
 	return (
-		<Card sx={{ maxWidth: 345,
-			height: 475,
-			display: 'flex',
-			flexDirection: 'column',
-			borderRadius: '20px',
-		}}>
+		<Card sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
 			<CardMedia sx={{ height: 240, borderRadius: '20px' }} image={image} title="Cooked sliced pizza" />
 			<CardContent sx={{ flexGrow: 1 }}>
 				<Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
 					{title}
+				</Typography>
+				<Typography variant="subtitle1" color="textSecondary">
+					{section}
 				</Typography>
 				<Typography variant="body2" color="textSecondary">
 					{description}

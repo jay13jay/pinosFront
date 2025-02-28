@@ -35,7 +35,7 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
       <Typography
         as="li"
         variant="small"
-        className="flex items-center gap-x-2 p-1 font-medium"
+        className="flex items-center gap-x-2 p-1 font-medium hover:text-green-500"
         placeholder=""
         onPointerEnterCapture={() => {}}
         onPointerLeaveCapture={() => {}}
@@ -96,11 +96,11 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
           Pinos RVA
         </Typography>
         <div className="hidden lg:block">{navList}</div>
-        <div className="flex items-center gap-x-1">
+        <div className="flex items-center gap-x-1 lg:order-none order-1">
         <Typography
           as="li"
           variant="h5"
-          className="flex items-center gap-x-2 p-1 font-medium" 
+          className="flex items-center gap-x-2 p-1 font-medium cursor-pointer text-white hover:text-yellow-500" 
           placeholder={undefined} 
           onPointerEnterCapture={undefined}
           onPointerLeaveCapture={undefined}      
@@ -113,7 +113,7 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
         </div>
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-6 w-6 flex items-center justify-center hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
           placeholder=""

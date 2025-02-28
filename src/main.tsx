@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import LocationAndHours from './Pages/LocationAndHours';
 import Menu from './Pages/Menu';
-import { Providers } from './Components/Providers';
+import Providers from './Components/Providers';
 import ChatBox from './Components/Chat/ChatBox';
 
 import CartPage from './Pages/CartPage';
@@ -37,7 +37,6 @@ if (container) {
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="*" element={<Home />} />
               </Routes>
-              <ChatBox />
             </Router>
       </Providers>
     </React.StrictMode>
