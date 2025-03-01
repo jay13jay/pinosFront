@@ -32,9 +32,9 @@ const MenuItem: React.FC<{ menuItem: MenuItemProps }> = ({ menuItem }) => {
 		<Card sx={{ maxWidth: 345, display: 'flex', flexDirection: 'column', borderRadius: '20px' }}>
 			<CardMedia sx={{ height: 240, borderRadius: '20px' }} image={image} title="Cooked sliced pizza" />
 			<CardContent sx={{ flexGrow: 1 }}>
-				<Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}>
+				{/* <Typography variant="h5" component="h2" sx={{ fontWeight: 600 }}> */}
 					{title}
-				</Typography>
+				{/* </Typography> */}
 				<Typography variant="subtitle1" color="textSecondary">
 					{section}
 				</Typography>
