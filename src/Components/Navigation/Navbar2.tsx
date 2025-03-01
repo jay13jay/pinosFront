@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Navbar,
   MobileNav,
@@ -14,20 +14,27 @@ import {
     faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
+import { CartContext } from "../Cart/CartContext"; // Import CartContext
 
 interface NavbarDefaultProps {
   title: string;
 }
 
 export function NavbarDefault({ title }: NavbarDefaultProps) {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
+  const { getTotal } = useContext(CartContext); // Use CartContext to get total price
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+
+  useEffect(() => {
+    setTotalPrice(parseFloat(getTotal().toFixed(2))); // Update total price from cart context with 2 decimal places
+  }, [getTotal]);
 
   const navList = (
     <ul className="mt-2 mb-4 flex font-black flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -85,6 +92,7 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
             <Link to="/cart" className="flex items-center">
               Order
             </Link>
+            <span className="ml-2 text-gray-100">(${totalPrice})</span> {/* Display active total price */}
           </li>
         </div>
       </div>

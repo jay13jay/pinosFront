@@ -45,7 +45,7 @@ const MenuItem: React.FC<{ menuItem: MenuItemProps }> = ({ menuItem }) => {
 						</div>
 
 						<button
-							className="bg-red-500 text-white py-2 px-4 rounded-2xl"
+							className="bg-red-500 text-white py-2 px-4 rounded-2xl cursor-pointer"
 							onClick={() => addItem({ id: id, name: title, price: price })}
 						>
 							Add
