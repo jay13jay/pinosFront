@@ -7,7 +7,6 @@ import Home from './Pages/Home';
 import LocationAndHours from './Pages/LocationAndHours';
 import Menu from './Pages/Menu';
 import Providers from './Components/Providers';
-import ChatBox from './Components/Chat/ChatBox';
 
 import CartPage from './Pages/CartPage';
 

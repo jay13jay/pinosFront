@@ -3,7 +3,6 @@ import React from 'react';
 declare const Navbar: React.FC;
 export default Navbar;
 
-
 declare const MainContent: React.FC<MainContentProps>;
 export default MainContent;
 
@@ -22,3 +21,11 @@ export interface NavButtonProps {
 
 declare const NavButton: React.FC<NavButtonProps>;
 export default NavButton;
+
+export interface JumbotronProps {
+    title: string;
+    subtitle: string;
+}
+
+declare const Jumbotron: React.FC<JumbotronProps>;
+export default Jumbotron;

@@ -30,20 +30,21 @@ module.exports = withMT({
     extend: {
       // Extend the default color palette
       colors: {
-        // current: "currentColor",   // Use the current text color
-        // transparent: "transparent",  // Transparent color
-        // white: "#FFFFFF",           // Pure white
-        // black: "#121723",           // Custom black shade
-        // dark: "#1D2430",            // Dark theme background
-        // primary: "#4A6CF7",         // Primary accent color
-        // yellow: "#FBB040",          // Yellow accent color
-        // "body-color": "#788293",    // Body text color for light theme
-        // "body-color-dark": "#959CB1", // Body text color for dark theme
-        // "gray-dark": "#1E232E",     // Dark gray for UI contrast
-        // "gray-light": "#F0F2F9",     // Light gray for backgrounds
-        // stroke: "#E3E8EF",          // Stroke color for borders
-        // "stroke-dark": "#353943",   // Stroke color for dark mode
-        // "bg-color-dark": "#171C28", // Background color for dark mode layouts
+        current: "currentColor",   // Use the current text color
+        transparent: "transparent",  // Transparent color
+        white: "#FFFFFF",           // Pure white
+        black: "#121723",           // Custom black shade
+        dark: "#1D2430",            // Dark theme background
+        primary: "#000000",         // Primary accent color
+        yellow: "#FBB040",          // Yellow accent color
+        "body-color": "#788293",    // Body text color for light theme
+        "body-color-dark": "#959CB1", // Body text color for dark theme
+        "gray-dark": "#1E232E",     // Dark gray for UI contrast
+        "gray-light": "#F0F2F9",     // Light gray for backgrounds
+        stroke: "#E3E8EF",          // Stroke color for borders
+        "stroke-dark": "#353943",   // Stroke color for dark mode
+        "bg-color-dark": "#171C28", // Background color for dark mode layouts
+        // "italian-flag": "linear-gradient(90deg, #008C45 33.33%, #F4F5F0 33.33%, #F4F5F0 66.66%, #CD212A 66.66%)" // Italian flag gradient,
       },
       // Extend with custom box shadow utilities
       boxShadow: {
@@ -51,7 +52,7 @@ module.exports = withMT({
         one: "0px 2px 3px rgba(7, 7, 77, 0.05)",       // Light default shadow
         two: "0px 5px 10px rgba(6, 8, 15, 0.1)",        // Medium intensity shadow
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)",     // Soft shadow for larger elements
-        sticky: "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",   // Inset shadow for sticky headers
+        sticky: "inset 0 -1px 0 0 rgba(255, 0, 0, 1)",   // Inset shadow for sticky headers
         "sticky-dark": "inset 0 -1px 0 0 rgba(255, 255, 255, 0.1)", // Inset shadow variant for dark mode
         "feature-2": "0px 10px 40px rgba(48, 86, 211, 0.12)", // Prominent shadow for feature sections
         submit: "0px 5px 20px rgba(4, 10, 34, 0.1)",      // Standard shadow for submit buttons
@@ -66,6 +67,6 @@ module.exports = withMT({
       },
     },
   },
-  // Define plugins (currently no plugins are added)
+  // Define plugins ( no plugins are added)
   plugins: [],
 });
