@@ -6,7 +6,7 @@
     "ingredients": ["Tomatoes", "Mozzarella Cheese", "Fresh Basil"],
     "section": "New York Style Pizza",
     "price": 12.99,
-    "image": "menu_items/Cooked_sliced_pizza_on_peel-CPO.jpg"
+    "image": "/menu_items/Cooked_sliced_pizza_on_peel-CPO.jpg"
   },
   {
     "id": 1,
@@ -15,7 +15,7 @@
     "section": "Italian Pasta",
     "ingredients": ["Spaghetti", "Eggs", "Cheese", "Pancetta", "Pepper"],
     "price": 14.99,
-    "image": "menu_items/spaghetti-carbonara.jpg"
+    "image": "/menu_items/spaghetti-carbonara.jpg"
   },
   {
     "id": 2,
@@ -24,6 +24,15 @@
     "section": "Desserts",
     "ingredients": ["Coffee", "Mascarpone Cheese", "Ladyfingers", "Cocoa Powder"],
     "price": 6.99,
-    "image": "menu_items/tiramisu.jpg"
+    "image": "/menu_items/tiramisu.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Cake",
+    "description": "A Marie Antwonette favorite",
+    "section": "Desserts",
+    "ingredients": ["Flour", "Sugar", "Eggs", "Butter", "Vanilla"],
+    "price": 10.99,
+    "image": "/menu_items/tiramisu.jpg"
   }
 ]

@@ -68,5 +68,7 @@ module.exports = withMT({
     },
   },
   // Define plugins ( no plugins are added)
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 });
