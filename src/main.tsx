@@ -27,17 +27,17 @@ if (container) {
   const root = createRoot(container);
   root.render(
     <React.StrictMode>
-      <Providers>
-            <Router basename={base}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/location-and-hours" element={<LocationAndHours />} />
-                <Route path="/menu" element={<Menu />} />
-                <Route path="/cart" element={<CartPage />} />
-                <Route path="*" element={<Home />} />
-              </Routes>
-            </Router>
-      </Providers>
+      <Router basename={base}>
+        <Providers>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/location-and-hours" element={<LocationAndHours />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </Providers>
+      </Router>
     </React.StrictMode>
   );
 } else {
