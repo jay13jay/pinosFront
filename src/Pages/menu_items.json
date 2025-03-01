@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "title": "Pizza Margherita",
+    "description": "Classic pizza with tomatoes, mozzarella cheese, and fresh basil.",
+    "ingredients": ["Tomatoes", "Mozzarella Cheese", "Fresh Basil"],
+    "section": "New York Style Pizza",
+    "price": 12.99,
+    "image": "menu_items/Cooked_sliced_pizza_on_peel-CPO.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "description": "Traditional Italian pasta with eggs, cheese, pancetta, and pepper.",
+    "section": "Italian Pasta",
+    "ingredients": ["Spaghetti", "Eggs", "Cheese", "Pancetta", "Pepper"],
+    "price": 14.99,
+    "image": "menu_items/spaghetti-carbonara.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Tiramisu",
+    "description": "Popular coffee-flavored Italian dessert.",
+    "section": "Desserts",
+    "ingredients": ["Coffee", "Mascarpone Cheese", "Ladyfingers", "Cocoa Powder"],
+    "price": 6.99,
+    "image": "menu_items/tiramisu.jpg"
+  }
+]
