@@ -66,12 +66,14 @@ const Menu: React.FC = () => {
   return (
     <>
       <MainContent>
-        <MenuContainer>
+        <div className="flex flex-wrap gap-2 justify-center mb-5">
           {menuSections.map((section, index) => (
-            <h2 className="hover:text-green-500" key={index} onClick={() => handleSectionClick(section)}>
+            <h2 className="hover:text-green-500 text-red-600 bg-white rounded-full px-2 py-1" key={index} onClick={() => handleSectionClick(section)}>
               {section}
             </h2>
           ))}
+        </div>
+        <MenuContainer>
           {filteredMenuItems.map((item, index) => (
             <MenuItem key={index} menuItem={item} />
           ))}
