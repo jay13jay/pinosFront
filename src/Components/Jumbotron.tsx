@@ -1,9 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    Typography,
-  } from "@material-tailwind/react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import { Link, useNavigate } from "react-router-dom"; // Import Link and useNavigate from react-router-dom
 import { JumbotronProps } from "./types"; // Import JumbotronProps from types file
 
 import { faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
@@ -30,19 +27,13 @@ export default function Jumbotron({ title, subtitle }: JumbotronProps) {
                                 <span className="my-1 inline-block border-b-8 border-primary px-4 font-bold text-g4 animate__animated animate__flash">different</span>
                             </h2>
                             <div className="mt-10 flex flex-col items-center md:flex-row">
-                                <Typography
-                                    as="li"
-                                    variant="h2"
-                                    className="flex items-center gap-x-2 p-1 font-medium" 
-                                    placeholder={undefined} 
-                                    onPointerEnterCapture={undefined} 
-                                    onPointerLeaveCapture={undefined}      
+                                <Link
+                                    to="/menu"
+                                    className="flex text-lg items-center gap-2 bg-italian-flag text-yellow-500 hover:text-yellow-600"
                                 >
-                                    <a href="Menu" className="flex text-lg items-center gap-2 bg-italian-flag text-yellow-500 hover:text-yellow-600">
                                     <FontAwesomeIcon icon={faPizzaSlice} />
-                                        See Our Menu
-                                    </a>
-                                    </Typography>
+                                    See Our Menu
+                                </Link>
                             </div>
                         </div>
                     </div>

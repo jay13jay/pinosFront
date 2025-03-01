@@ -58,9 +58,9 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
       onPointerLeaveCapture={undefined}>
 
       <div className="container mx-auto flex items-center justify-between text-black-900">
-        <h1 className="mr-4 cursor-pointer py-1.5 font-medium text-white hover:text-yellow-500">
+        <Link to="/" className="mr-4 cursor-pointer py-1.5 font-medium text-white hover:text-yellow-500">
           Pinos RVA
-        </h1>
+        </Link>
         <div className="hidden lg:block">{navList}</div>
         <div className="flex items-center gap-x-1 lg:order-none order-1">
           <li className="flex items-center gap-x-2 p-1 font-medium cursor-pointer text-white hover:text-yellow-500">
