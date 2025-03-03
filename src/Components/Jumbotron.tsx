@@ -19,20 +19,28 @@ export default function Jumbotron({ title, subtitle }: JumbotronProps) {
                             <img src="https://placehold.co/200x100" className="w-36 z-0 h-full object-fill fill-y text-y" />
                         </div>
                         <div className="lg:max-w-xl lg:pr-5 relative z-40">
-                            <p className="flex text-lg uppercase text-secondary">
+                            <p className="flex text-lg text-gray-900 font-bold  text-secondary">
                                 {title}
                             </p>
-                            <h2 className="mb-6 max-w-lg text-yellow text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
+                            <h2 className="mb-6 max-w-lg text-gray-50 text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
                                 {subtitle}
-                                <span className="my-1 inline-block border-b-8 border-primary px-4 font-bold text-g4 animate__animated animate__flash">different</span>
+                                {/* <Link to="/menu">
+                                <div className="my-1 text-5xl inline-block border-b-8 border-primary px-4 text-gray-900">
+                                    <span className="text-green-500"> See</span>
+                                    <span className="text-white"> Our</span>
+                                    <span className="text-red-500 hover:inset-shadow-red-700"> Menu</span>
+                                </div>
+                                </Link> */}
                             </h2>
                             <div className="mt-10 flex flex-col items-center md:flex-row">
                                 <Link
                                     to="/menu"
-                                    className="flex text-lg items-center gap-2 bg-italian-flag text-yellow-500 hover:text-yellow-600"
+                                    className="flex text-lg items-center gap-2 px-6 py-3 font-bold bg-gray-800 rounded-full shadow-lg hover:bg-secondary hover:text-primary"
                                 >
-                                    <FontAwesomeIcon icon={faPizzaSlice} />
-                                    See Our Menu
+                                    
+                                    <span className="text-green-500 hover:shadow-glow-green">See</span>
+                                    <span className="text-white hover:shadow-glow-white">Our</span>
+                                    <span className="text-red-500 hover:shadow-glow-red">Menu</span>
                                 </Link>
                             </div>
                         </div>

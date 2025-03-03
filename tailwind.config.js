@@ -60,11 +60,23 @@ module.exports = withMT({
         btn: "0px 1px 2px rgba(4, 10, 34, 0.15)",         // Minimal button shadow
         "btn-hover": "0px 1px 2px rgba(0, 0, 0, 0.15)",    // Hover state shadow for buttons
         "btn-light": "0px 1px 2px rgba(0, 0, 0, 0.1)",     // Light variant for button shadow
+        'glow-green': '0 0 10px rgba(0, 255, 0, 0.7)',
+        'glow-white': '0 0 10px rgba(255, 255, 255, 0.7)',
+        'glow-red': '0 0 10px rgba(255, 0, 0, 0.7)',
       },
       // Extend with custom drop shadow utilities
       dropShadow: {
         three: "0px 5px 15px rgba(6, 8, 15, 0.05)", // Additional drop shadow for visual depth
       },
+      glow: [
+        "0 0px 20px rgba(255,255, 255, 0.35)",
+        "0 0px 65px rgba(255, 255,255, 0.2)"
+      ],
+    },
+  },
+  variants: {
+    extend: {
+      boxShadow: ['hover'],
     },
   },
   // Define plugins ( no plugins are added)

@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL;
 const Home: React.FC = () => {
   return (
     <>
-      <Jumbotron title="Welcome to Pinos rVA" subtitle="Authentic Italian Cuisine" />
+      <Jumbotron title="Welcome to Pinos RVA" subtitle="The passion for Italian food done well" />
     </>
   );
 };
