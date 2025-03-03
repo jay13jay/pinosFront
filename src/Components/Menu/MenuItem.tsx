@@ -17,20 +17,20 @@ const MenuItem: React.FC<{ menuItem: MenuItemProps }> = ({ menuItem }) => {
 	));
 
 	return (
-		<div className="flex bg-gray-900 flex-row md:flex-col rounded-2xl shadow-lg w-full md:max-w-4xl min-w-[350px]">
+		<div className="flex bg-gray-900 flex-row md:flex-col rounded-2xl shadow-lg md:max-w-4xl min-w-[350px]">
 			{showDetails && (
 				<img className="h-60 w-full rounded-t-2xl md:rounded-t-none" src={image} alt="Cooked sliced pizza" />
 			)}
 			<div className="flex-grow p-4 rounded-b-2xl md:rounded-r-2xl md:rounded-b-none">
 				<div className="flex flex-col md:flex-row">
-					<div className="flex-col w-full space-y-1 mr-10">
+					<div className="flex-col w-full space-y-1 mr-10 min-w-[200px]">
 						<h2 className="text-xl font-semibold">
 							{title}
 						</h2>
-						<p className="text-lg text-red-500 text-gray-500">
+						<p className="text-md text-red-500 italic ">
 							{section}
 						</p>
-						<p className="text-sm text-gray-900 bg-gray-300 rounded-b-full line-clamp-2 mb-5 md:mb-0 font-bold">
+						<p className="text-md text-gray-900 bg-gray-300 rounded-b-full pb-5 px-5 line-clamp-2 mb-5 md:mb-0 font-bold">
 							{description}
 						</p>
 					</div>
