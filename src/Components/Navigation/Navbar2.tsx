@@ -21,16 +21,17 @@ interface NavbarDefaultProps {
 }
 
 export function NavbarDefault({ title }: NavbarDefaultProps) {
-  const [openNav, setOpenNav] = useState(false);
+  const [openNav, setOpenNav] = useState(false); // Initialize to false
   const { getTotal } = useContext(CartContext); // Use CartContext to get total price
   const [totalPrice, setTotalPrice] = useState(0);
 
-  useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
-  }, []);
+  // Remove useEffect for window resize event
+  // useEffect(() => {
+  //   window.addEventListener(
+  //     "resize",
+  //     () => window.innerWidth >= 960 && setOpenNav(false)
+  //   );
+  // }, []);
 
   useEffect(() => {
     setTotalPrice(parseFloat(getTotal().toFixed(2))); // Update total price from cart context with 2 decimal places
@@ -40,12 +41,12 @@ export function NavbarDefault({ title }: NavbarDefaultProps) {
     <ul className="mt-2 mb-4 flex font-black flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <li className="flex items-center gap-x-2 p-1 font-medium text-green-500 hover:text-green-700">
         <FontAwesomeIcon icon={faHouse}/>
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center" onClick={() => setOpenNav(false)}>
           Home
         </Link>
       </li>
       <li className="flex items-center gap-x-2 p-1 font-medium">
-        <Link to="/menu" className="flex items-center gap-2 text-gray-100 hover:text-gray-700">
+        <Link to="/menu" className="flex items-center gap-2 text-gray-100 hover:text-gray-700" onClick={() => setOpenNav(false)}>
           <FontAwesomeIcon icon={faPizzaSlice} />
           Menu
         </Link>
