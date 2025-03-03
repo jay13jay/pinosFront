@@ -1,17 +1,4 @@
 import React, { useState } from 'react';
-import { styled } from '@mui/material/styles';
-import { Box, Paper, IconButton, TextField, Button, List, ListItem } from '@mui/material';
-import Grid from '@mui/material/Grid2';
-import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
-import CloseIcon from '@mui/icons-material/Close';
-
-const Item = styled(Paper)(({ theme }) => ({
-	backgroundColor: '#grey',
-	...theme.typography.body2,
-	padding: theme.spacing(1),
-	textAlign: 'center',
-	color: theme.palette.text.secondary,
-  }));
 
 const ChatBox: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,68 +13,45 @@ const ChatBox: React.FC = () => {
   };
 
   return (
-    <Box sx={{ 
-        position: 'fixed',
-        borderRadius: 15,
-        bottom: 70, 
-        right: 20, 
-        zIndex: 1000,
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          boxShadow: '0px 0px 13px rgba(0, 200, 255, 0.7)',
-        //   borderRadius: 15,
-          zIndex: -1,
-        }
-      }}>
+    <div className="fixed bottom-10 right-5 z-50">
       {isOpen ? (
-        <Paper elevation={3}>
-          <Grid container alignItems="center" justifyContent="space-between" padding={1}>
-            <Grid>Chat</Grid>
-            <Grid>
-              <IconButton onClick={toggleChat}>
-                <CloseIcon />
-              </IconButton>
-            </Grid>
-          </Grid>
-          <List sx={{ backgroundColor: '#e0e0e0', px: 1, maxHeight: 300, overflow: 'auto' }}>
+        <div className="bg-gray-900 rounded-lg shadow-lg p-2 w-80">
+          <div className="flex justify-between items-center mb-2">
+            <h3 className="text-lg font-semibold">Chat</h3>
+            <button onClick={toggleChat} className="text-gray-500 hover:text-gray-700">
+              ✖
+            </button>
+          </div>
+          <div className="bg-gray-800 p-0.5 rounded-lg mb-2 max-h-60 overflow-y-auto">
             {messages.map((msg, idx) => (
-              <ListItem sx={{ backgroundColor: 'white' }} key={idx}>{msg}</ListItem>
+              <div key={idx} className="bg-gray-900 p-0.5 pl-2 rounded-lg mb-1 shadow-sm">{msg}</div>
             ))}
-          </List>
-          <Grid container alignItems="center" padding={1} spacing={1}>
-            <Item>
-              <TextField
-                fullWidth
-                size="small"
-                placeholder="Type a message…"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    e.preventDefault();
-                    handleSend();
-                  }
-                }}
-              />
-            </Item>
-            <Item>
-              <Button color="success" variant="contained" onClick={handleSend}>
-                Send
-              </Button>
-            </Item>
-          </Grid>
-        </Paper>
+          </div>
+          <div className="flex space-x-2">
+            <input
+              type="text"
+              className="flex-1 p-2 border rounded-lg"
+              placeholder="Type a message…"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault();
+                  handleSend();
+                }
+              }}
+            />
+            <button onClick={handleSend} className="bg-green-500 text-white p-1 rounded-md hover:bg-green-600">
+              Send
+            </button>
+          </div>
+        </div>
       ) : (
-        <IconButton onClick={toggleChat}>
-          <ChatBubbleIcon color="info" fontSize="large" />
-        </IconButton>
+        <button onClick={toggleChat} className="bg-blue-500 text-white p-3 rounded-lg shadow-lg hover:bg-blue-600">
+          💬
+        </button>
       )}
-    </Box>
+    </div>
   );
 };
 

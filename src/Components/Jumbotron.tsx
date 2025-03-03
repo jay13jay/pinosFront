@@ -24,25 +24,14 @@ export default function Jumbotron({ title, subtitle }: JumbotronProps) {
                             </p>
                             <h2 className="mb-6 max-w-lg text-gray-50 text-5xl font-light leading-snug tracking-tight text-g1 sm:text-7xl sm:leading-snug">
                                 {subtitle}
-                                {/* <Link to="/menu">
+                                <Link to="/menu">
                                 <div className="my-1 text-5xl inline-block border-b-8 border-primary px-4 text-gray-900">
                                     <span className="text-green-500"> See</span>
                                     <span className="text-white"> Our</span>
                                     <span className="text-red-500 hover:inset-shadow-red-700"> Menu</span>
                                 </div>
-                                </Link> */}
-                            </h2>
-                            <div className="mt-10 flex flex-col items-center md:flex-row">
-                                <Link
-                                    to="/menu"
-                                    className="flex text-lg items-center gap-2 px-6 py-3 font-bold bg-gray-800 rounded-full shadow-lg hover:bg-secondary hover:text-primary"
-                                >
-                                    
-                                    <span className="text-green-500 hover:shadow-glow-green">See</span>
-                                    <span className="text-white hover:shadow-glow-white">Our</span>
-                                    <span className="text-red-500 hover:shadow-glow-red">Menu</span>
                                 </Link>
-                            </div>
+                            </h2>
                         </div>
                     </div>
                     <div className="relative hidden lg:ml-32 lg:block lg:w-1/2">
